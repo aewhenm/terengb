@@ -1,0 +1,5 @@
+rootProject.name = 'terengb'
+
+include 'tbackend'
+include 'tfrontend'
+

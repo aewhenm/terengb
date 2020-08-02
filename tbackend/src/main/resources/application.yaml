@@ -1,0 +1,19 @@
+spring:
+  security:
+    user:
+      name: superadmin
+      password: superpass123
+  session:
+    jdbc:
+      initialize-schema: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+  datasource:
+    username: ${DB_USER:terengb-user}
+    url: ${DB_FULL_URL:jdbc:postgresql://localhost:5433/terengb}
+    password: ${DB_PASSWORD:rhqWCpGtT1VLDdLh}
+    hikari:
+      maximum-pool-size: 50
+      minimum-idle: 5
