@@ -8,7 +8,7 @@ spring:
       initialize-schema: always
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
   datasource:
     username: ${DB_USER:terengb-user}
