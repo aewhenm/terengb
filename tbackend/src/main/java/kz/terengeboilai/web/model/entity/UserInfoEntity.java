@@ -22,8 +22,9 @@ public class UserInfoEntity extends ActualEntity {
   @ManyToMany
   @JoinTable(
       name = "user_info_roles",
-      joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-      inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+      joinColumns = @JoinColumn(name = "user_info_id", referencedColumnName = "id"),
+      inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "code")
+  )
   private List<RoleEntity> roles;
 
 

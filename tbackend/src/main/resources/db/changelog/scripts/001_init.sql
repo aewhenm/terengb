@@ -19,3 +19,13 @@ create table user_info
     password varchar(255),
     actual   boolean     not null default false
 );
+
+create table user_info_roles
+(
+    user_info_id varchar(50)
+        constraint user_info_roles_user_id_fk
+            references user_info,
+    role_id      varchar(50)
+        constraint user_info_roles_role_id_fk
+            references role
+);
